@@ -24,7 +24,14 @@ python -m pip install -r requirements.txt
 python scripts/validate_data.py
 python scripts/validate_data.py --geography
 python -m unittest discover -s tests -v
+python scripts/03_clean_merge.py     # cleaning, county assignment, features
+python scripts/04_visualize.py       # EDA tables and figures
 ```
+
+Processing writes `data/processed/` and `reports/processing_quality_report.md`.
+EDA writes `figures/` and `reports/eda_findings.md`. Read the quality report
+before quoting any number: it records missing-status coverage, the sites held for
+review, and the population-size confounding check.
 
 Use Python 3.11 or newer. All raw inputs are committed, so **no download, API key,
 or Git LFS is needed after cloning**. Offline validation uses only Python's
