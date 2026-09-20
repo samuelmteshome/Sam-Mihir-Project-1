@@ -1,0 +1,10 @@
+# Analysis environment; certifi supplies trusted certificates for HTTPS downloads.
+certifi>=2024.2.2
+pandas>=2.2,<3
+numpy>=1.26,<3
+geopandas>=1.0,<2
+shapely>=2.0,<3
+pyogrio>=0.9,<1
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+jupyterlab>=4.2,<5

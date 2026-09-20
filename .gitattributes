@@ -1,0 +1,10 @@
+*.py text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.zip binary
+*.png binary
+*.pdf binary
+# Preserve source bytes and checksum validity on every operating system.
+data/raw/* -text

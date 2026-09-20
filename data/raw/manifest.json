@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "cdc_places": {
+      "title": "CDC PLACES County Data (GIS Friendly Format), 2025 release",
+      "dataset_id": "i46a-9kgh",
+      "source_url": "https://data.cdc.gov/resource/i46a-9kgh.csv?%24limit=10000&%24order=countyfips",
+      "metadata_url": "https://data.cdc.gov/api/views/i46a-9kgh.json",
+      "count_url": "https://data.cdc.gov/resource/i46a-9kgh.json?%24select=count%28%2A%29",
+      "row_count": 3143,
+      "release_year": 2025,
+      "stroke_estimate_year": 2023,
+      "population_year": 2023,
+      "transformations": "None; full CSV response and source metadata saved verbatim.",
+      "retrieved_at_utc": "2026-09-20T15:55:08+00:00",
+      "files": {
+        "places_county_2025.csv": {
+          "bytes": 5328113,
+          "sha256": "c0e7a972d708cd3d54d344b7f2b3c0abf343157cb1367a01a6949eb0f346b98d"
+        },
+        "places_county_2025_metadata.json": {
+          "bytes": 313099,
+          "sha256": "d153727670cf14335f6952685556cbe7c52c098b6261ccccf21c1c2acc61123c"
+        }
+      }
+    },
+    "clinicaltrials": {
+      "title": "ClinicalTrials.gov U.S. interventional stroke trial snapshot",
+      "source_url": "https://clinicaltrials.gov/api/v2/studies",
+      "query_parameters": {
+        "query.cond": "stroke",
+        "filter.advanced": "AREA[StudyType]INTERVENTIONAL AND AREA[LocationCountry]\"United States\"",
+        "filter.overallStatus": "RECRUITING,ENROLLING_BY_INVITATION,ACTIVE_NOT_RECRUITING",
+        "fields": "NCTId,BriefTitle,Condition,StudyType,Phase,OverallStatus,LastUpdatePostDate,LocationFacility,LocationStatus,LocationCity,LocationState,LocationZip,LocationCountry,LocationGeoPoint",
+        "format": "json",
+        "pageSize": 100,
+        "countTotal": "true"
+      },
+      "study_count": 436,
+      "pages_fetched": 5,
+      "transformations": "API field projection; study arrays concatenated across pages; no study or location cleaning. All returned locations retained.",
+      "retrieved_at_utc": "2026-09-20T15:55:58+00:00",
+      "files": {
+        "clinicaltrials_stroke.json": {
+          "bytes": 2685860,
+          "sha256": "71570dcc9bbe4bf57959ba9a9d80e38c7d01100f8372151b6bf262c33f367ed3"
+        }
+      }
+    },
+    "census_boundaries": {
+      "title": "U.S. Census 2023 County Cartographic Boundaries, 1:500,000",
+      "source_url": "https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_us_county_500k.zip",
+      "geography_year": 2023,
+      "transformations": "None; ZIP saved verbatim, including source metadata and projection.",
+      "caution": "Simplified cartographic boundaries, not precise geocoding boundaries. Review ambiguous or unmatched points.",
+      "retrieved_at_utc": "2026-09-20T15:56:00+00:00",
+      "files": {
+        "cb_2023_us_county_500k.zip": {
+          "bytes": 11630077,
+          "sha256": "99d6597b1fc7767deef62e01d28d8b5dcbd578e151855f7dc0d173cbf5bf0868"
+        }
+      }
+    }
+  }
+}
