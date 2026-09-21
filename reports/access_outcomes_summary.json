@@ -1,0 +1,181 @@
+{
+  "population_year": 2020,
+  "population_scope": "50 states and DC, all ages, residents (not citizenship)",
+  "mortality_period": "2021\u20132023",
+  "county_geography": 2020,
+  "trial_snapshot_utc": "2026-09-20T15:55:58+00:00",
+  "distance_method": "Tract population-weighted mean center to nearest registry coordinate; great-circle miles",
+  "death_denominator": "Sum of published county annual-average counts; excludes suppressed/missing counties",
+  "processed_input_sha256": {
+    "trial_sites_clean.csv": "9a16549301cd8fa572b4cb57916736d9c12edbd62d9e11fa875f1b6e956c15f7",
+    "site_assignment_review.csv": "7eb636cdbad4e4b68187617622b622767d4c65ac10add598d6332399d4744441",
+    "county_analysis.csv": "ce489e4b828f16ce11fac726822831dbf52f67001e5e0ffa90284da7945f77b2"
+  },
+  "county_count": 3143,
+  "tract_count": 84414,
+  "review_rows_excluded_upstream": 5,
+  "cohorts": {
+    "active": {
+      "geocoded_trial_site_pairs": 1389,
+      "unique_registry_coordinates": 337,
+      "counties_with_site": 235,
+      "population": 331449281,
+      "percentiles_miles": {
+        "50": 11.991322257734183,
+        "75": 31.152058799383937,
+        "90": 62.4970105907934,
+        "95": 87.74333009894761
+      },
+      "percent_beyond_miles": {
+        "25": 30.201929748642296,
+        "50": 14.334309869871161,
+        "100": 3.7781765470174604
+      },
+      "mortality": {
+        "counties_with_published_counts": 1995,
+        "counties_without_published_counts": 1148,
+        "sum_published_annual_average_deaths": 158301.0,
+        "sum_published_annual_average_deaths_in_no_site_counties": 78543.0,
+        "percent_published_deaths_in_no_site_counties": 49.61623742111547,
+        "no_site_counties_with_published_counts": 1762,
+        "no_site_counties_without_published_counts": 1146
+      }
+    },
+    "recruiting": {
+      "geocoded_trial_site_pairs": 1337,
+      "unique_registry_coordinates": 327,
+      "counties_with_site": 229,
+      "population": 331449281,
+      "percentiles_miles": {
+        "50": 12.217764681651355,
+        "75": 32.07223625645952,
+        "90": 63.91824732620633,
+        "95": 89.15236059761973
+      },
+      "percent_beyond_miles": {
+        "25": 30.78557530495895,
+        "50": 14.961696055089647,
+        "100": 3.9223602962047157
+      },
+      "mortality": {
+        "counties_with_published_counts": 1995,
+        "counties_without_published_counts": 1148,
+        "sum_published_annual_average_deaths": 158301.0,
+        "sum_published_annual_average_deaths_in_no_site_counties": 79599.0,
+        "percent_published_deaths_in_no_site_counties": 50.283321015028335,
+        "no_site_counties_with_published_counts": 1768,
+        "no_site_counties_without_published_counts": 1146
+      }
+    },
+    "active_plus_unknown_sensitivity": {
+      "geocoded_trial_site_pairs": 2952,
+      "unique_registry_coordinates": 579,
+      "counties_with_site": 354,
+      "population": 331449281,
+      "percentiles_miles": {
+        "50": 8.681459814743112,
+        "75": 22.576569002488732,
+        "90": 46.41206978688267,
+        "95": 65.52028273209959
+      },
+      "percent_beyond_miles": {
+        "25": 22.806244675486262,
+        "50": 8.753779435714026,
+        "100": 2.1516175803682014
+      },
+      "mortality": {
+        "counties_with_published_counts": 1995,
+        "counties_without_published_counts": 1148,
+        "sum_published_annual_average_deaths": 158301.0,
+        "sum_published_annual_average_deaths_in_no_site_counties": 62935.0,
+        "percent_published_deaths_in_no_site_counties": 39.75653975653976,
+        "no_site_counties_with_published_counts": 1644,
+        "no_site_counties_without_published_counts": 1145
+      }
+    }
+  },
+  "mortality_by_metro_status_active": {
+    "metro": {
+      "counties_with_published_counts": 1024,
+      "counties_without_published_counts": 155,
+      "sum_published_annual_average_deaths": 133856.0,
+      "sum_published_annual_average_deaths_in_no_site_counties": 55693.0,
+      "percent_published_deaths_in_no_site_counties": 41.60665192445613,
+      "no_site_counties_with_published_counts": 806,
+      "no_site_counties_without_published_counts": 154
+    },
+    "nonmetro": {
+      "counties_with_published_counts": 963,
+      "counties_without_published_counts": 993,
+      "sum_published_annual_average_deaths": 22944.0,
+      "sum_published_annual_average_deaths_in_no_site_counties": 22463.0,
+      "percent_published_deaths_in_no_site_counties": 97.90359135285914,
+      "no_site_counties_with_published_counts": 951,
+      "no_site_counties_without_published_counts": 992
+    },
+    "unavailable": {
+      "counties_with_published_counts": 8,
+      "counties_without_published_counts": 0,
+      "sum_published_annual_average_deaths": 1501.0,
+      "sum_published_annual_average_deaths_in_no_site_counties": 387.0,
+      "percent_published_deaths_in_no_site_counties": 25.782811459027315,
+      "no_site_counties_with_published_counts": 5,
+      "no_site_counties_without_published_counts": 0
+    }
+  },
+  "population_distance_by_metro_status_active": {
+    "metro": {
+      "population": 282251529,
+      "percentiles_miles": {
+        "50": 9.765837615822077,
+        "75": 21.01591101387835,
+        "90": 43.281087770187,
+        "95": 65.98178946488245
+      },
+      "percent_beyond_miles": {
+        "25": 20.633183177547995,
+        "50": 7.969793141492601,
+        "100": 2.2555969927092936
+      }
+    },
+    "nonmetro": {
+      "population": 45591808,
+      "percentiles_miles": {
+        "50": 53.11084020485329,
+        "75": 77.40619902281577,
+        "90": 115.94470853739612,
+        "95": 157.28372711361925
+      },
+      "percent_beyond_miles": {
+        "25": 91.09774720932322,
+        "50": 54.86973449265272,
+        "100": 13.503044231103974
+      }
+    },
+    "unavailable": {
+      "population": 3605944,
+      "percentiles_miles": {
+        "50": 7.641658847737641,
+        "75": 12.393608767699412,
+        "90": 24.68963579686544,
+        "95": 35.04404404586823
+      },
+      "percent_beyond_miles": {
+        "25": 9.248452000363844,
+        "50": 0.0,
+        "100": 0.0
+      }
+    }
+  },
+  "places_counties_without_matching_2020_geography": [
+    "09110",
+    "09120",
+    "09130",
+    "09140",
+    "09150",
+    "09160",
+    "09170",
+    "09180",
+    "09190"
+  ]
+}
