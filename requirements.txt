@@ -10,3 +10,5 @@ seaborn>=0.13,<1
 jupyterlab>=4.2,<5
 scipy>=1.10,<1.15
 tabulate>=0.9,<1
+scipy>=1.10,<1.15
+tabulate>=0.9,<1
