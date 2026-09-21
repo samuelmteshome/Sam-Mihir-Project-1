@@ -60,6 +60,63 @@
           "sha256": "99d6597b1fc7767deef62e01d28d8b5dcbd578e151855f7dc0d173cbf5bf0868"
         }
       }
+    },
+    "census_population_centers_2020": {
+      "title": "2020 Census tract population-weighted mean centers",
+      "source_url": "https://www2.census.gov/geo/docs/reference/cenpop2020/tract/CenPop2020_Mean_TR.txt",
+      "row_count": 85395,
+      "population_year": 2020,
+      "transformations": "None; national file preserved verbatim, including territories.",
+      "retrieved_at_utc": "2026-09-21T21:33:34+00:00",
+      "files": {
+        "tract_population_centers_2020.txt": {
+          "bytes": 3583604,
+          "sha256": "137d5b7bc8139a385c2022f54a9aca00ea56bc5ad81c936cf8134e977d50d2c5"
+        }
+      }
+    },
+    "census_boundaries_2020": {
+      "title": "2020 Census county cartographic boundaries, 1:500,000",
+      "source_url": "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_500k.zip",
+      "transformations": "None; used to retain historical Connecticut counties.",
+      "retrieved_at_utc": "2026-09-21T21:33:35+00:00",
+      "files": {
+        "cb_2020_us_county_500k.zip": {
+          "bytes": 12587934,
+          "sha256": "1a45c87a5a0c322514c9d5c9ebcba5eb9df313bd38962f6db56107ba0ccacc6f"
+        }
+      }
+    },
+    "hrsa_ahrf_mortality_2025": {
+      "title": "HRSA AHRF 2024–2025: county cerebrovascular deaths and rural context",
+      "source_url": "https://data.hrsa.gov/DataDownload/AHRF/AHRF_2024-2025_CSV.zip",
+      "documentation_url": "https://data.hrsa.gov/DataDownload/AHRF/AHRF_USER_TECH_2024-2025.zip",
+      "upstream_archive_sha256": "6974adcd93ed8e0718d655e6912707bfc5ec37a9a2baf1fc27f59f12b5c441a0",
+      "row_count": 3235,
+      "fields": [
+        "fips_st_cnty",
+        "st_name",
+        "st_name_abbrev",
+        "cnty_name",
+        "cerbrvsc_dis_deth_3yr_23",
+        "cerbrvsc_dis_deth_3yr_22",
+        "rural_urban_contnm_23",
+        "cens_popn_20",
+        "cens_rural_popn_20"
+      ],
+      "mortality_period": "2021–2023 (primary); 2020–2022 (comparison)",
+      "transformations": "CSV field projection, FIPS sort, LF serialization; original values and blanks retained. Full archive not committed.",
+      "retrieved_at_utc": "2026-09-21T21:33:38+00:00",
+      "files": {
+        "ahrf_stroke_mortality_2025.csv": {
+          "bytes": 144493,
+          "sha256": "efe4952b5f0ac7e5ac93040a54eb43b67b02677c35b2c654aa372d33e6f9e183"
+        },
+        "ahrf_documentation_2025.zip": {
+          "bytes": 1019394,
+          "sha256": "aa03026107b8acf7fd5c5f2d0c96c30b44d254cbb122a31141a3aee2d726f680"
+        }
+      }
     }
   }
 }

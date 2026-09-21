@@ -10,10 +10,10 @@ eligibility or the availability of treatment.
 
 ## Start here
 
-This repository contains the source data and a reproducible acquisition setup.
-**Cleaning, county assignment, feature engineering, EDA, and final figures are
-still to be implemented by the team.** No analysis results are implied by the
-starter files.
+This repository contains source snapshots, county processing, EDA, and a new
+stroke mortality and population-distance extension. Start with the
+[access and mortality findings](reports/access_outcomes.md) and
+[methods](docs/ACCESS_OUTCOMES.md) for slide-ready statements and their limits.
 
 ```bash
 git clone https://github.com/samuelmteshome/Sam-Mihir-Project-1.git
@@ -26,10 +26,14 @@ python scripts/validate_data.py --geography
 python -m unittest discover -s tests -v
 python scripts/03_clean_merge.py     # cleaning, county assignment, features
 python scripts/04_visualize.py       # EDA tables and figures
+python scripts/05_get_access_outcomes.py  # verify cached Census/HRSA snapshots
+python scripts/06_analyze_access_outcomes.py  # distance, deaths, and figures
 ```
 
 Processing writes `data/processed/` and `reports/processing_quality_report.md`.
-EDA writes `figures/` and `reports/eda_findings.md`. Read the quality report
+EDA writes `figures/` and `reports/eda_findings.md`. The mortality extension writes
+`county_analysis_with_mortality.csv`, historical-county and tract tables, two
+figures, and `reports/access_outcomes.md`; it preserves the original outputs. Read the quality report
 before quoting any number: it records missing-status coverage, the sites held for
 review, and the population-size confounding check.
 
@@ -71,6 +75,7 @@ These commands reuse the committed snapshot by default and verify its checksums:
 python scripts/01_get_places.py
 python scripts/02_get_trials.py
 python scripts/00_get_boundaries.py
+python scripts/05_get_access_outcomes.py
 python scripts/validate_data.py
 ```
 
@@ -87,23 +92,25 @@ data needs neither network access nor a certificate setup.
 
 ```text
 data/raw/             Source snapshots, CDC metadata, and acquisition manifest
-data/processed/       Future cleaned tables (tracked when created)
-scripts/              Downloaders, validation, and processing/plotting starters
+data/processed/       Cleaned county/site tables, tract distances, mortality features
+scripts/              Downloaders, validation, processing, and analysis
 docs/                 Source notes, field guide, handoff, and deliverable checklist
-figures/              Future figures
+figures/              EDA and access/mortality figures
 reports/              Public narrative and presentation outlines
 tests/                Acquisition behavior checks
 .github/workflows/    Offline data checks on pushes and pull requests
 ```
 
-The future analysis entry points are `scripts/03_clean_merge.py` and
-`scripts/04_visualize.py`. They deliberately report unfinished work until the
-partner implements them; running them does not generate cleaned data or figures.
+The original analysis entry points are `scripts/03_clean_merge.py` and
+`scripts/04_visualize.py`. The new `scripts/06_analyze_access_outcomes.py` uses
+the cleaned sites and committed Census/HRSA snapshots. See
+[the extension field guide](docs/ACCESS_OUTCOMES.md) for source definitions,
+suppression, historical Connecticut counties, and the population-distance method.
 
 ## Collaboration
 
-The initial setup is on `main`. Each member must still make at least one substantive
-PR, as required by the course. Suggested next steps:
+The setup and county processing are on `main`. Each member should make at least
+one substantive PR, as required by the course. Use a feature branch:
 
 ```bash
 git pull --ff-only origin main

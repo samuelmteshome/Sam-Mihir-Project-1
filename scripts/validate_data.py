@@ -19,7 +19,7 @@ def require(condition, message):
 def validate():
     manifest = read_manifest()
     require(manifest.get("schema_version") == 1, "Unsupported manifest schema")
-    require(set(manifest["sources"]) == {"cdc_places", "clinicaltrials", "census_boundaries"},
+    require({"cdc_places", "clinicaltrials", "census_boundaries"}.issubset(manifest["sources"]),
             "Download all three sources first")
     for source in manifest["sources"].values():
         for name, expected in source["files"].items():
